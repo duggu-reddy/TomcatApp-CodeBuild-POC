@@ -1,0 +1,19 @@
+version: 0.2
+            
+phases:
+  pre_build:
+    commands:
+      - which jar
+  build:
+    commands:
+      - jar -cvf poctomcat.war *
+  post_build:
+    commands:
+      - echo "Building WAR file completed for tomcat"
+artifacts:
+  files:
+    - poctomcat.war
+    - buildspec.yml
+    - appspec.yml
+  name: poctomcat
+  discard-paths: yes
