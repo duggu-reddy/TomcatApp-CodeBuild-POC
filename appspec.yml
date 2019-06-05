@@ -1,0 +1,7 @@
+version: 0.0
+os: linux
+# Copy over all of the folders and files with the permissions they
+# #  were originally assigned.
+files:
+  - source: ./
+    destination: /usr/share/tomcat/webapps
